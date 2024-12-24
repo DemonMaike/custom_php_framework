@@ -1,0 +1,20 @@
+# composer
+/vendor/
+
+# tests
+/phpunit.xml
+/phpunit.xml.dist
+/coverage/
+
+
+# temp
+/.cache/
+/tmp/
+/*.tmp
+
+# env
+.env
+
+# logs
+/logs/
+/*.log

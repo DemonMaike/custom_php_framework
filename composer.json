@@ -1,0 +1,20 @@
+{
+    "name": "demonmaike/pfm",
+    "description": "This is pet-project for getting to know about php",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Pfm\\": "vendor/pfm",
+            "App\\": "app"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dmitry Malyshev",
+            "email": "i@dmiitrymalyshev.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
