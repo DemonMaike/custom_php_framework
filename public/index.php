@@ -1,8 +1,7 @@
 <?php
 
-if (PHP_MAJOR_VERSION < 8) {
+use Pfm\App;
 
-    die("Версия ниже 8");
-} else {
-    echo "Все чики бомбито!";
-}
+require_once (dirname(__DIR__) . "/config/init.php");
+
+new App();
