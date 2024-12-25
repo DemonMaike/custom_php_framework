@@ -5,3 +5,5 @@ use Pfm\App;
 require_once (dirname(__DIR__) . "/config/init.php");
 
 new App();
+
+throw new Exception("Ошибка",500);

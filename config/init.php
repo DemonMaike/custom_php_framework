@@ -2,7 +2,7 @@
 
 define("DEBUG", 1);
 define("ROOT", dirname(dirname(__DIR__) . "/.."));
-define("PUBLIC", ROOT . "/public");
+define("PUB", ROOT . "/public");
 define("APP", ROOT . "/app");
 define("CORE", ROOT . "/vendor/pfm");
 define("HELPERS", ROOT . "/vendor/pfm/helpers");
