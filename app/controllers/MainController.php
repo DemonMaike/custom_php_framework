@@ -2,8 +2,10 @@
 
 namespace App\controllers;
 
+use Pfm\Controller;
 
-class MainController
+
+class MainController extends Controller
 {
 
     public function indexAction() {
