@@ -44,10 +44,14 @@ class Router
                  * @var Controller $controllerObject
                  */
                 $controllerObject = new $controller(self::$route);
+                
                 $controllerObject->getModel();
+
                 $action = self::lowerCamelCase(self::$route["action"] . "Action");
                 if (method_exists($controller, $action)) {
                     $controllerObject->$action();
+                    $controllerObject->getView();
+
                     } else {
                         throw new \Exception("Метод ". $controller ." ". $action ."не найден.");
                     }

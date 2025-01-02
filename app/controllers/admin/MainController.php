@@ -2,9 +2,11 @@
 
 namespace App\controllers\admin;
 
-class MainController
+use Pfm\Controller;
+
+class MainController extends Controller
 {
     public function indexAction(){
-        echo "Админка:" . __METHOD__;
+
     }
 }
