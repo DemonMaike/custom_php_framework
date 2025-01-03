@@ -6,7 +6,8 @@ use Pfm\Controller;
 
 class MainController extends Controller
 {
-    public function indexAction(){
-
+    public function indexAction()
+    {
+        
     }
 }

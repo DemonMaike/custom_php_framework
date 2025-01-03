@@ -6,7 +6,7 @@ namespace Pfm;
 abstract class Controller
 {
     public array $data = [];
-    public array $meta = ["title" => "", "descrption"=>"", "keywords" => ""];
+    public array $meta = ["title" => "", "description"=>"", "keywords" => ""];
     public false|string $layout = "";
     public string $view = "";
     public object $model;
@@ -41,11 +41,9 @@ abstract class Controller
 
     public function setMeta($title="", $description="", $keywords="")
     {
-        $this->meta =[
-            "title" => $title,
-            "descrption" => $description,
-            "keywords"=> $keywords
-        ];
+        $this->meta["title"] = $title;
+        $this->meta["description"] = $description;
+        $this->meta["keywords"] = $keywords;
     }
 
 }
