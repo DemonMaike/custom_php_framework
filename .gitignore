@@ -1,6 +1,6 @@
 # composer
-/vendor/composer
-/vendor/autoload.php
+/vendor/*
+!/vendor/pfm
 
 # tests
 /phpunit.xml

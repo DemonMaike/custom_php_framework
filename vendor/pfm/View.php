@@ -1,6 +1,7 @@
 <?php
 
 namespace Pfm;
+use RedBeanPHP\R;
 
 class View
 {
@@ -51,6 +52,32 @@ class View
         $out .= '<meta name="description" content="' . h($this->meta['description']) . '">' . PHP_EOL;
         $out .= '<meta name="description" content="' . h($this->meta['keywords']) . '">' . PHP_EOL;
         return $out;
+    }
+
+    public function getDbLogs()
+    {
+        if (DEBUG){
+            $logs = R::getDatabaseAdapter()
+            ->getDatabase()
+            ->getLogger();
+        $logs = array_merge($logs->grep("SELECT"), $logs->grep("INSERT"),
+                            $logs->grep("UPDATE"),$logs->grep("DELETE"));
+        debug($logs);
+        }
+    }
+
+    public function getPart($file, $data=null)
+    {
+        if (is_array($data))
+        {
+            extract($data);
+        }
+        $file = APP . "/views/{$file}.php";
+        if (is_file($file)) {
+            require $file;
+        } else {
+            echo "Файл {$file} не найден.";
+        }
     }
 
 }

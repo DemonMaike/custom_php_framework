@@ -1,3 +1,7 @@
 <h1>Hello Main/index!</h1>
 
-<?=$test?>
+<?php
+
+foreach ($names as $name) {
+    echo $name["name"] . "<br>";
+}
