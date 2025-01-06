@@ -1,0 +1,21 @@
+server {
+    listen 8000;
+    server_name dima.ru;
+    root /var/www/my_php_site/public;
+    index index.php;
+
+    location / {
+        try_files $uri $uri/ /index.php?$args;
+    }
+
+    location ~ \.php$ {
+        include fastcgi_params;
+        fastcgi_pass unix:/var/run/php-fpm/php-fpm.sock;
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    }
+
+    location /static/ {
+        alias /var/www/my_php_site/public/assets/;
+    }
+}
