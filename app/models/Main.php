@@ -3,7 +3,7 @@
 namespace App\models;
 use RedBeanPHP\R;
 
-class Main extends \Pfm\Model
+class Main extends AppModel
 {
     public function getNames():array
     {

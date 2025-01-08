@@ -18,4 +18,8 @@ server {
     location /static/ {
         alias /var/www/my_php_site/public/assets/;
     }
+
+    location /public/uploads/ {
+        alias /var/www/my_php_site/public/uploads/; 
+    }
 }
